@@ -44,4 +44,24 @@ echo '<br />';
 echo '<br />';
 
 
-echo $my_car['year'];
+//Sorting Associative Arrays
+$dream_car = ['brand: '=>'Lexus','model: '=>'Rx 350','year: '=>'2017','color: '=>'Red'];
+
+
+asort($dream_car); //asort() sorts the array in ascending order, maintaining key association
+echo '<h4 style=color:purple;margin:0px;> Values of my dream car sorted in ASCENDING order</h4>';
+foreach ($dream_car as $key => $value) {
+    # code...
+    echo $key.' '.$value.'<br/>';
+}
+echo '<br/>';
+
+echo '<h4 style=color:purple;margin:0px;> Values of my dream car sorted in DESCENDING order</h4>';
+ksort($dream_car); //ksort() sorts the array in ascending order, maintaining key association
+foreach ($dream_car as $key => $value) {
+    # code...
+    echo $key.' '.$value.'<br/>';
+}
+
+krsort($dream_car); //reverses the sort on the keys
+arsort($dream_car); //reverses the sort on the values
